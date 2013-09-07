@@ -17,6 +17,12 @@
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
+      <div class="request_info"> 
+        Request  was made for this url: <%= request.url%>
+        on this port:<%= request.port%>.
+        Hostname used for this request: <%= request.host%>.
+        Your IP adress is: <%= request.ip%>.
+      </div>
     </div>
   </body>
 </html>
